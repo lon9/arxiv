@@ -13,7 +13,6 @@ const BaseURL = "https://arxiv.org/list"
 
 // Crawler is crawler.
 type Crawler struct {
-	Output string
 	Genres []string
 }
 
