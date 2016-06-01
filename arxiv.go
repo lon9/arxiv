@@ -59,7 +59,7 @@ func (c *Crawler) scrape(url string) ([]Paper, error) {
 			s.Find("dt").Each(func(i int, s *goquery.Selection) {
 				var paper Paper
 				if id, exist := s.Find("span").Find("a").Attr("href"); exist {
-					paper.ID = filepath.Base(id)
+					paper.ArxivKey = filepath.Base(id)
 				}
 				papers = append(papers, paper)
 			})

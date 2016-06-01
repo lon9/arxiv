@@ -2,7 +2,8 @@ package arxiv
 
 // Paper is object for paper
 type Paper struct {
-	ID          string   `json:"id"`
+	ID          uint     `json:"id"`
+	ArxivKey    string   `json:"arxivKey"`
 	Title       string   `json:"title"`
 	Authors     []Author `json:"authors"`
 	Subject     string   `json:"subject"`
@@ -11,6 +12,8 @@ type Paper struct {
 
 // Author is object for author.
 type Author struct {
-	Name string `json:"name"`
-	URL  string `json:"url"`
+	ID      uint   `json:"id"`
+	Name    string `json:"name"`
+	URL     string `json:"url"`
+	PaperID uint   `json:"paperId"`
 }
