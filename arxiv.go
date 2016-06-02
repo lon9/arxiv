@@ -74,7 +74,7 @@ func (c *Crawler) scrape(url string) ([]Paper, error) {
 					}
 					papers[i].Authors = append(papers[i].Authors, author)
 				})
-				papers[i].Subject = s.Find(".list-subject").Find(".primary-subject").Text()
+				papers[i].Subject = s.Find(".list-subjects").Find(".primary-subject").Text()
 				papers[i].Description = s.Find("p").Text()
 			})
 		}
