@@ -17,8 +17,10 @@ type Crawler struct {
 }
 
 // NewCrawler is constructor of Crawler.
-func NewCrawler() *Crawler {
-	return &Crawler{}
+func NewCrawler(genres []string) *Crawler {
+	return &Crawler{
+		Genres: genres,
+	}
 }
 
 // AddGenre adds genre.
